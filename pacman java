@@ -1,0 +1,23 @@
+import java.awt.*;
+import java.awt.event.*;
+
+public class Pacman extends Frame {
+   public Pacman() {
+      setSize(800, 800);
+      setVisible(true);
+   }
+
+   public void paint(Graphics g) {
+      g.setColor(Color.YELLOW);
+      g.fillArc(200, 200, 400, 400, 45, 270);
+   }
+
+   public static void main(String args[]) {
+      Pacman p = new Pacman();
+      p.addWindowListener(new WindowAdapter(){
+         public void windowClosing(WindowEvent we){
+            System.exit(0);
+         }
+      });
+   }
+}
